@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script src="https://pic.xumi.cn/static/activity/effectListen.js"></script>
+</head>
+
+<body>
+  <button>click</button>
+  <form class="example_5">
+    <div class="my-form-group" data-scope="example_5" data-name="identity" data-type="select" v-validate-easy="[['required','选择一个身份']]">
+      <div class="label">身份（单选列表）</div><select><option>学生</option><option>工作</option></select></div>
+    <div class="my-form-group" data-scope="example_5" data-name="eat" data-type="select" v-validate-easy="[['required','喜欢吃的必须选择一个']]">
+      <div class="label">爱吃的（多选列表）</div><select multiple="multiple"><option>鸡</option><option>鸭</option><option>鱼</option><option>肉</option></select></div>
+    <div class="btn-group"><button class="my-btn" @click.prevent="submit('example_5')">提交表单</button><button class="my-btn" @click.prevent="reset('example_5')">重置表单</button></div>
+  </form>
+  <script>
+    document.querySelector('button').onclick = function () {
+      doXmEffect()
+    }
+  </script>
+</body>
+
+</html>
